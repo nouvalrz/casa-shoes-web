@@ -1,0 +1,160 @@
+:root {
+  --red: #f55252;
+  --darkred: #ac3535;
+  --lightgrey: #f6f6f6;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header.navbar {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+  z-index: 9999;
+}
+
+nav.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+nav.nav-list a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  transition: all 0.2s;
+}
+
+nav.nav-list a:hover {
+  background-color: black;
+  color: white;
+}
+
+button {
+  background-color: var(--red);
+  color: white;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  min-width: 10rem;
+  min-height: 3rem;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: var(--darkred);
+  cursor: pointer;
+}
+
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 8rem;
+  margin-block: 8rem;
+}
+
+article {
+  scroll-margin-top: 10rem;
+  margin-bottom: 8rem;
+}
+
+article .article-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+article#featured {
+  text-align: center;
+}
+
+article#featured img {
+  width: 100%;
+  margin-block: 2rem;
+}
+
+aside.promo {
+  width: 300px;
+  height: 350px;
+  border: 1px solid black;
+  position: sticky;
+  top: 7rem;
+}
+
+div#content {
+  display: flex;
+  gap: 1.5rem;
+  margin-inline: 3rem;
+  margin-block: 10rem;
+}
+
+.brand-container {
+  flex-grow: 1;
+}
+
+header.article-header .article-header-desc p {
+  max-width: 50rem;
+}
+
+.brand-products {
+  display: flex;
+  gap: 2rem;
+}
+
+.product {
+  margin-block: 1rem;
+  border: 1px solid transparent;
+}
+
+.product:hover {
+  border: 1px solid black;
+}
+
+.product img {
+  max-width: 250px;
+}
+
+.product img {
+  padding: 1rem;
+  background-color: var(--lightgrey);
+}
+
+.product-desc {
+  margin-left: 1rem;
+}
+
+.product-desc .name {
+  font-weight: 500;
+}
+
+.product-desc .category {
+  color: gray;
+}
+
+.product-desc .price {
+  font-weight: 600;
+}
+.article-header-desc h2 {
+  margin-top: 0;
+}
