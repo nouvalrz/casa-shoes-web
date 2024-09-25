@@ -34,9 +34,15 @@ header.navbar {
   z-index: 9999;
 }
 
+.navbar .logo a {
+  text-decoration: none;
+  color: black;
+}
+
 nav.nav-list {
   display: flex;
   gap: 2rem;
+  justify-content: center;
 }
 
 nav.nav-list a {
@@ -69,9 +75,28 @@ button:hover {
 
 .jumbotron {
   display: flex;
-  justify-content: space-between;
-  margin-inline: 8rem;
-  margin-block: 8rem;
+  max-width: 80rem;
+  margin-inline: auto;
+  align-items: center;
+  margin-block: 10rem;
+  padding: 2rem 4rem;
+}
+
+.jumbotron-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.jumbotron-desc {
+  flex: 1 1;
+}
+
+.jumbotron-img {
+  flex: 1;
+}
+
+.jumbotron-img img {
+  width: 100%;
 }
 
 article {
@@ -84,6 +109,9 @@ article .article-header {
   gap: 2rem;
   align-items: flex-start;
 }
+.article-header img {
+  width: 5rem;
+}
 
 article#featured {
   text-align: center;
@@ -94,17 +122,26 @@ article#featured img {
   margin-block: 2rem;
 }
 
+.featured-desc {
+  padding: 1rem 2rem;
+}
+
 aside.promo {
-  width: 300px;
-  height: 350px;
+  width: 18rem;
   border: 1px solid black;
   position: sticky;
   top: 7rem;
+  padding: 1rem;
+}
+
+aside.promo img {
+  width: 100%;
 }
 
 div#content {
+  align-items: flex-start;
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   margin-inline: 3rem;
   margin-block: 10rem;
 }
@@ -157,4 +194,88 @@ header.article-header .article-header-desc p {
 }
 .article-header-desc h2 {
   margin-top: 0;
+}
+
+footer {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding-block: 1rem;
+}
+
+footer .footer-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+.footer-icons i {
+  transition: all 0.2s;
+}
+
+.footer-icons i:hover {
+  color: var(--red);
+}
+
+@media screen and (max-width: 1200px) {
+  #content {
+    flex-flow: column nowrap;
+  }
+
+  aside.promo {
+    position: static;
+    align-self: center;
+  }
+
+  .brand-products {
+    flex-flow: row wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav.nav-list {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .jumbotron {
+    padding: 1rem 2rem;
+    margin-block: 7rem;
+  }
+  .jumbotron-content {
+    flex-direction: column;
+  }
+
+  .jumbotron-img {
+    order: -1;
+  }
+
+  article#featured img {
+    height: 7.5rem;
+    object-fit: cover;
+  }
+
+  article {
+    margin-bottom: 5rem;
+  }
+
+  div#content {
+    margin-block: 5rem;
+  }
+
+  .brand-products {
+    flex-flow: column wrap;
+    align-items: stretch;
+  }
+
+  .product img {
+    width: 100%;
+    max-width: none;
+  }
+
+  header.navbar {
+    flex-direction: column;
+  }
 }
